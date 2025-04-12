@@ -1,3 +1,5 @@
+// === dummy-window.js ===
+
 imports.gi.versions.Gtk = "3.0";
 const { Gtk, Gdk } = imports.gi;
 
@@ -11,8 +13,8 @@ class DummyWindow {
     if (!win) {
       win = new Gtk.ApplicationWindow({
         application: app,
-        defaultHeight: 1,
-        defaultWidth: 1,
+        defaultHeight: 0,
+        defaultWidth: 0,
       });
     }
     win.set_keep_above(true);
@@ -24,7 +26,7 @@ class DummyWindow {
     const screen = Gdk.Screen.get_default();
     const primaryScreen = screen.get_monitor_geometry(0);
     const { x, y } = primaryScreen;
-    win.move(x + 200, y + 200);
+    win.move(x + 100, y + 100);
     win.present();
   }
 
@@ -41,4 +43,3 @@ class DummyWindow {
 }
 
 new DummyWindow();
-
