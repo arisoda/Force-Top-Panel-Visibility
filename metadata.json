@@ -1,0 +1,8 @@
+{
+  "uuid": "force-top-panel-visibility@arisoda.com",
+  "name": "Force Top Panel Visibility",
+  "description": "Toggle (by right-clicking) to force the top panel to be visible in fullscreen",
+  "shell-version": ["48"],
+  "version": 1
+}
+
